@@ -139,7 +139,7 @@ class OutlierCapper(BaseEstimator, TransformerMixin):
             else:
                 q1, q3 = np.percentile(v, 25), np.percentile(v, 75)
                 iqr = q3 - q1
-                low, high = (q1, q3) if iqr == 0 else (q1 - 1.5 * iqr, q3 + 1.5 * iqr)
+                low, high = (q1, q3) if iqr == 0 else (q1 - 1.45 * iqr, q3 + 1.55 * iqr)
             self.bounds_.append((low, high))
         return self
 
