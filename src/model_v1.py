@@ -390,8 +390,12 @@ def main(data_path=DEFAULT_DATA,
 
     # Infer types on train
     num, cat = infer_feature_types(X_train, target="")
+    # Preprocessinig applied
     prep = build_preprocessor(num, cat)
+    # Build pipeline
     pipe = build_pipeline(prep)
+
+    # Get parameters
     grid = get_param_grid()
 
     # Safe CV folds given minority class size
