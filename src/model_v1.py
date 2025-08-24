@@ -492,7 +492,7 @@ def main(data_path=DEFAULT_DATA,
 
     if tinfo and not tinfo.get("constraints_met", False):
         print(
-            f"\n[warn] Could not meet precision>={MIN_PRECISION:.2f} & recall>={MIN_RECALL:.2f} at any threshold. "
+            f"\n[warn] Could not meet precision>={MIN_PRECISION:.3f} & recall>={MIN_RECALL:.3f} at any threshold. "
             f"Best: P={tinfo['precision']:.3f}, R={tinfo['recall']:.3f}."
         )
 
