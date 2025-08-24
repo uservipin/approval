@@ -27,11 +27,11 @@ MAX_ITER = 100
 C_GRID = [10, 100, 200]
 
 # threshold constraints
-MIN_PRECISION = 0.60
-MIN_RECALL = 0.60
+MIN_PRECISION = 0.72
+MIN_RECALL = 0.65
 
-RANDOM_STATE = 42
-TEST_SIZE = 0.30
+RANDOM_STATE = 44
+TEST_SIZE = 0.25
 
 # ---------------- Utility helpers ----------------
 def _make_serializable(obj: Any) -> Any:
