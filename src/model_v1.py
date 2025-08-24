@@ -71,7 +71,7 @@ def _ohe_feature_names(ohe: OneHotEncoder, input_features: List[str]) -> List[st
 def make_ohe():
     # Try modern API; fallback to legacy args for older sklearn versions
     try:
-        return OneHotEncoder(handle_unknown="ignore", sparse_output=False, min_frequency=0.01)
+        return OneHotEncoder(handle_unknown="ignore", sparse_output=False, min_frequency=0.05)
     except TypeError:
         return OneHotEncoder(handle_unknown="ignore", sparse=False)
 
