@@ -21,10 +21,10 @@ FEATURE_CLASSIFICATION: Optional[str] = "model_resources/feature_classification.
 OUT_DIR = "model_resources"
 
 # speed/quality knobs
-CV_FOLDS = 10
+CV_FOLDS = 5
 FAST_MODE = True        # if True -> only lbfgs; if False -> lbfgs & saga
-MAX_ITER = 100
-C_GRID = [10, 100, 200]
+MAX_ITER = 200
+C_GRID = [0.01, 1, 5, 10, 100]
 
 # threshold constraints
 MIN_PRECISION = 0.72
